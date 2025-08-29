@@ -30,29 +30,56 @@ hill-of-towie-wind-turbine/
 
 ## 🚀 Quick Start
 
-1. **Clone and setup environment**:
+### Option 1: Automated Setup (Recommended)
+```bash
+cd hill-of-towie-wind-turbine
+python setup.py --skip-pytorch  # Skip PyTorch if disk space issues
+```
+
+### Option 2: Manual Setup
+1. **Create and activate environment**:
    ```bash
    cd hill-of-towie-wind-turbine
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
    ```
 
-2. **Set up Kaggle API** (if not already done):
+2. **Install dependencies**:
    ```bash
-   # Place your kaggle.json in ~/.kaggle/
-   chmod 600 ~/.kaggle/kaggle.json
+   # Basic requirements (without heavy ML libraries)
+   pip install pandas numpy scikit-learn xgboost lightgbm matplotlib seaborn plotly jupyter kaggle
+   
+   # Optional: PyTorch for AMD GPUs (large download - ~2GB)
+   pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm6.2
+   
+   # Optional: TensorFlow CPU version
+   pip install tensorflow-cpu
    ```
 
-3. **Download data** (already downloaded):
+3. **Set up Kaggle API** (already configured):
    ```bash
-   kaggle competitions download -c hill-of-towie-wind-turbine-power-prediction
+   # Verify Kaggle API works
+   kaggle competitions list
    ```
 
 4. **Start exploring**:
    ```bash
    jupyter lab notebooks/01_eda.ipynb
    ```
+
+### Handling Disk Space Issues
+If you encounter "No space left on device" errors:
+```bash
+# Clean pip cache
+pip cache purge
+
+# Use custom temporary directory
+mkdir -p $HOME/tmp
+export TMPDIR=$HOME/tmp
+
+# Install with minimal cache
+pip install --no-cache-dir package_name
+```
 
 ## 📊 Data Description
 
