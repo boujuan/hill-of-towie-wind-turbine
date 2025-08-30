@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-08-30T19:20:10.434745",
+  "recommendation": "Focus on competition data, consider T6 only if needed",
+  "competition_data": {
+    "turbines": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "years": "2016-2020",
+    "features_per_turbine": 29,
+    "total_rows_train": 210384,
+    "total_rows_test": 52704
+  },
+  "original_data": {
+    "years_available": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020"
+    ],
+    "has_turbine_6": true,
+    "total_turbines": 21,
+    "processing_effort_hours": 17.0
+  },
+  "cost_benefit": {
+    "benefit_score": 16,
+    "cost_score": 20,
+    "net_score": -4,
+    "recommendation": "\u274c SKIP - Focus on competition data"
+  },
+  "critical_warnings": [
+    "Never use Turbine 1 data from 2020",
+    "Validate no data leakage",
+    "Focus on competition data first"
+  ]
+}
