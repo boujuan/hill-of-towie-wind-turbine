@@ -1,0 +1,18 @@
+{
+  "train_samples": 210384,
+  "test_samples": 52704,
+  "train_valid_pct": 95.69311354475626,
+  "test_valid_pct": 97.79902853673346,
+  "target_mean": 663.6442168538614,
+  "target_std": 715.832593397324,
+  "target_min": 0.0,
+  "target_max": 2304.946044921875,
+  "n_features": 156,
+  "turbines_available": [
+    2,
+    3,
+    4,
+    5,
+    7
+  ]
+}
