@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7c14cc6fa768539e70363f39a8676ed7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; right: 50px; width: 200px; height: 120px; 
+            background-color: white; z-index:9999; font-size:14px;
+            border:2px solid grey; padding: 10px">
+<p style="margin: 0;"><b>Hill of Towie Wind Farm</b></p>
+<p style="margin: 5px 0;">⭐ T1 - Target (Gold)</p>
+<p style="margin: 5px 0;">✅ Competition (Green)</p>
+<p style="margin: 5px 0;">❌ T6 - Excluded (Red)</p>
+<p style="margin: 5px 0;">➖ Other Excluded (Gray)</p>
+</div>
+    
+            <div class="folium-map" id="map_7c14cc6fa768539e70363f39a8676ed7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7c14cc6fa768539e70363f39a8676ed7 = L.map(
+                "map_7c14cc6fa768539e70363f39a8676ed7",
+                {
+                    center: [57.505768197619034, -3.0683841857142857],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4cec25b3c5e688fa2511025dbf4f6226 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4cec25b3c5e688fa2511025dbf4f6226.addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var marker_b9ebd2a91036d9835a42e747ebf1e4db = L.marker(
+                [57.49921441, -3.086742896],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_74c6ba9a969a3a3f2428ac3c135b425b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gold",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_254983573a874bf5430458d3d1c7848a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e059012d7443d8bb2613ccef66e23cd4 = $(`<div id="html_e059012d7443d8bb2613ccef66e23cd4" style="width: 100.0%; height: 100.0%;">     <b>Turbine 01</b><br><b>TARGET TURBINE</b><br>     Station ID: 2304510<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.499214, -3.086743)<br>     Status: In Competition     </div>`)[0];
+                popup_254983573a874bf5430458d3d1c7848a.setContent(html_e059012d7443d8bb2613ccef66e23cd4);
+            
+        
+
+        marker_b9ebd2a91036d9835a42e747ebf1e4db.bindPopup(popup_254983573a874bf5430458d3d1c7848a)
+        ;
+
+        
+    
+    
+            marker_b9ebd2a91036d9835a42e747ebf1e4db.bindTooltip(
+                `<div>
+                     T01
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9ebd2a91036d9835a42e747ebf1e4db.setIcon(icon_74c6ba9a969a3a3f2428ac3c135b425b);
+            
+    
+            var marker_834704a4c680a37d67ead3f1fd96b7c8 = L.marker(
+                [57.49626574, -3.082817716],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_bb3672d558d1647b46d6c4ac768cee29 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70c2a4dfa7293f76071f244f35a647db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fa8a2816f57d6f2c02241fff40e85df = $(`<div id="html_2fa8a2816f57d6f2c02241fff40e85df" style="width: 100.0%; height: 100.0%;">     <b>Turbine 02</b><br>Distance to T1: 403.1m<br>     Station ID: 2304511<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.496266, -3.082818)<br>     Status: In Competition     </div>`)[0];
+                popup_70c2a4dfa7293f76071f244f35a647db.setContent(html_2fa8a2816f57d6f2c02241fff40e85df);
+            
+        
+
+        marker_834704a4c680a37d67ead3f1fd96b7c8.bindPopup(popup_70c2a4dfa7293f76071f244f35a647db)
+        ;
+
+        
+    
+    
+            marker_834704a4c680a37d67ead3f1fd96b7c8.bindTooltip(
+                `<div>
+                     T02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_834704a4c680a37d67ead3f1fd96b7c8.setIcon(icon_bb3672d558d1647b46d6c4ac768cee29);
+            
+    
+            var marker_7b585149fc7cfd50f1176ad30cdf869d = L.marker(
+                [57.50206973, -3.088980479],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_408907af7d3db7d103cd2528b8396901 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_349e1e43e230e3aed38760541a474850 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aebba97a488101d4ba107142871e1c50 = $(`<div id="html_aebba97a488101d4ba107142871e1c50" style="width: 100.0%; height: 100.0%;">     <b>Turbine 03</b><br>Distance to T1: 344.5m<br>     Station ID: 2304512<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.502070, -3.088980)<br>     Status: In Competition     </div>`)[0];
+                popup_349e1e43e230e3aed38760541a474850.setContent(html_aebba97a488101d4ba107142871e1c50);
+            
+        
+
+        marker_7b585149fc7cfd50f1176ad30cdf869d.bindPopup(popup_349e1e43e230e3aed38760541a474850)
+        ;
+
+        
+    
+    
+            marker_7b585149fc7cfd50f1176ad30cdf869d.bindTooltip(
+                `<div>
+                     T03
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b585149fc7cfd50f1176ad30cdf869d.setIcon(icon_408907af7d3db7d103cd2528b8396901);
+            
+    
+            var marker_4ea8f53c21f8349ea37012b07ad4e2e8 = L.marker(
+                [57.50196736, -3.082085466],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_f6c9b9b7340b612dc852e307614d6fd0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_723fed977334628fb6cf8312eb5663e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_93d2f78faa1e7f3489dc5b986bb02cb8 = $(`<div id="html_93d2f78faa1e7f3489dc5b986bb02cb8" style="width: 100.0%; height: 100.0%;">     <b>Turbine 04</b><br>Distance to T1: 413.7m<br>     Station ID: 2304513<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.501967, -3.082085)<br>     Status: In Competition     </div>`)[0];
+                popup_723fed977334628fb6cf8312eb5663e9.setContent(html_93d2f78faa1e7f3489dc5b986bb02cb8);
+            
+        
+
+        marker_4ea8f53c21f8349ea37012b07ad4e2e8.bindPopup(popup_723fed977334628fb6cf8312eb5663e9)
+        ;
+
+        
+    
+    
+            marker_4ea8f53c21f8349ea37012b07ad4e2e8.bindTooltip(
+                `<div>
+                     T04
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ea8f53c21f8349ea37012b07ad4e2e8.setIcon(icon_f6c9b9b7340b612dc852e307614d6fd0);
+            
+    
+            var marker_276116209014c1f2fc24a81afedd5154 = L.marker(
+                [57.49891107, -3.07812382],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_fc89190c07e5366d4b0cd4d6464f7b2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8fd34fe291dac6d54aa76ea6b7b1dfca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5110f10b81e16147f79dccef7a5dbf08 = $(`<div id="html_5110f10b81e16147f79dccef7a5dbf08" style="width: 100.0%; height: 100.0%;">     <b>Turbine 05</b><br>Distance to T1: 516.1m<br>     Station ID: 2304514<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.498911, -3.078124)<br>     Status: In Competition     </div>`)[0];
+                popup_8fd34fe291dac6d54aa76ea6b7b1dfca.setContent(html_5110f10b81e16147f79dccef7a5dbf08);
+            
+        
+
+        marker_276116209014c1f2fc24a81afedd5154.bindPopup(popup_8fd34fe291dac6d54aa76ea6b7b1dfca)
+        ;
+
+        
+    
+    
+            marker_276116209014c1f2fc24a81afedd5154.bindTooltip(
+                `<div>
+                     T05
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_276116209014c1f2fc24a81afedd5154.setIcon(icon_fc89190c07e5366d4b0cd4d6464f7b2d);
+            
+    
+            var marker_f2a0bb2deb987ba5e479d63cba829bb0 = L.marker(
+                [57.50024464, -3.071321578],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_7e27fae13718d91b83f6f7623d6c00e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "times",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_373619bc22b42b959eddd08656526b16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fbcbbd9cb942eb13794fe95627c7d2bf = $(`<div id="html_fbcbbd9cb942eb13794fe95627c7d2bf" style="width: 100.0%; height: 100.0%;">     <b>Turbine 06</b><br>Distance to T1: 928.4m<br>     Station ID: 2304515<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.500245, -3.071322)<br>     Status: Excluded     </div>`)[0];
+                popup_373619bc22b42b959eddd08656526b16.setContent(html_fbcbbd9cb942eb13794fe95627c7d2bf);
+            
+        
+
+        marker_f2a0bb2deb987ba5e479d63cba829bb0.bindPopup(popup_373619bc22b42b959eddd08656526b16)
+        ;
+
+        
+    
+    
+            marker_f2a0bb2deb987ba5e479d63cba829bb0.bindTooltip(
+                `<div>
+                     T06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2a0bb2deb987ba5e479d63cba829bb0.setIcon(icon_7e27fae13718d91b83f6f7623d6c00e8);
+            
+    
+            var marker_8f29156cf0dedd6a2ab18f990ce743cd = L.marker(
+                [57.50513302, -3.085850762],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_f22a8be1d8e588885a5d4c0982f7b473 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "check",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f1a7fd5154f5bfb7b4d1c372b44d5ab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_741f9cedf18e6373f7352dfc1d4c3c6f = $(`<div id="html_741f9cedf18e6373f7352dfc1d4c3c6f" style="width: 100.0%; height: 100.0%;">     <b>Turbine 07</b><br>Distance to T1: 660.3m<br>     Station ID: 2304516<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.505133, -3.085851)<br>     Status: In Competition     </div>`)[0];
+                popup_3f1a7fd5154f5bfb7b4d1c372b44d5ab.setContent(html_741f9cedf18e6373f7352dfc1d4c3c6f);
+            
+        
+
+        marker_8f29156cf0dedd6a2ab18f990ce743cd.bindPopup(popup_3f1a7fd5154f5bfb7b4d1c372b44d5ab)
+        ;
+
+        
+    
+    
+            marker_8f29156cf0dedd6a2ab18f990ce743cd.bindTooltip(
+                `<div>
+                     T07
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8f29156cf0dedd6a2ab18f990ce743cd.setIcon(icon_f22a8be1d8e588885a5d4c0982f7b473);
+            
+    
+            var marker_070eb10d53fcb79a46de3c12426f889e = L.marker(
+                [57.50465629, -3.077542275],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_399360954295691c76462a0e0c54c9bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35116bb86e9459473bef7f2bc978356a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ba566318f372a54f5e3493c3e458e2b = $(`<div id="html_4ba566318f372a54f5e3493c3e458e2b" style="width: 100.0%; height: 100.0%;">     <b>Turbine 08</b><br>Distance to T1: 817.5m<br>     Station ID: 2304517<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.504656, -3.077542)<br>     Status: Excluded     </div>`)[0];
+                popup_35116bb86e9459473bef7f2bc978356a.setContent(html_4ba566318f372a54f5e3493c3e458e2b);
+            
+        
+
+        marker_070eb10d53fcb79a46de3c12426f889e.bindPopup(popup_35116bb86e9459473bef7f2bc978356a)
+        ;
+
+        
+    
+    
+            marker_070eb10d53fcb79a46de3c12426f889e.bindTooltip(
+                `<div>
+                     T08
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_070eb10d53fcb79a46de3c12426f889e.setIcon(icon_399360954295691c76462a0e0c54c9bb);
+            
+    
+            var marker_3ae6add4fe6a3a42a4edf6c901f714b7 = L.marker(
+                [57.50827835, -3.08257274],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_7c3b3790389c67e2c681ed6406da5a07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_babf325d7102958dfa3a55c450e77c14 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a271fc92fb52a257b9a2ebd73469ba3c = $(`<div id="html_a271fc92fb52a257b9a2ebd73469ba3c" style="width: 100.0%; height: 100.0%;">     <b>Turbine 09</b><br>Distance to T1: 1038.2m<br>     Station ID: 2304518<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.508278, -3.082573)<br>     Status: Excluded     </div>`)[0];
+                popup_babf325d7102958dfa3a55c450e77c14.setContent(html_a271fc92fb52a257b9a2ebd73469ba3c);
+            
+        
+
+        marker_3ae6add4fe6a3a42a4edf6c901f714b7.bindPopup(popup_babf325d7102958dfa3a55c450e77c14)
+        ;
+
+        
+    
+    
+            marker_3ae6add4fe6a3a42a4edf6c901f714b7.bindTooltip(
+                `<div>
+                     T09
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3ae6add4fe6a3a42a4edf6c901f714b7.setIcon(icon_7c3b3790389c67e2c681ed6406da5a07);
+            
+    
+            var marker_40981aa03dc850045e421ee0ce2c7f94 = L.marker(
+                [57.50542459, -3.070655631],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_a825af2f5962e443da196565a516ca4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7253930a8e8bc88cb8d265afe606a173 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41c86fbf2f1190200195cdbd24209e7f = $(`<div id="html_41c86fbf2f1190200195cdbd24209e7f" style="width: 100.0%; height: 100.0%;">     <b>Turbine 10</b><br>Distance to T1: 1183.4m<br>     Station ID: 2304519<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.505425, -3.070656)<br>     Status: Excluded     </div>`)[0];
+                popup_7253930a8e8bc88cb8d265afe606a173.setContent(html_41c86fbf2f1190200195cdbd24209e7f);
+            
+        
+
+        marker_40981aa03dc850045e421ee0ce2c7f94.bindPopup(popup_7253930a8e8bc88cb8d265afe606a173)
+        ;
+
+        
+    
+    
+            marker_40981aa03dc850045e421ee0ce2c7f94.bindTooltip(
+                `<div>
+                     T10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_40981aa03dc850045e421ee0ce2c7f94.setIcon(icon_a825af2f5962e443da196565a516ca4a);
+            
+    
+            var marker_851f82f7937442b443391d37a7ffd023 = L.marker(
+                [57.51184311, -3.080658605],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_483939cd5d0c0d23ff952ad9507e560a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_828677a6d53b28f30d25f37521f7b251 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fb6f00f3733c3cf0452222228a1ecf14 = $(`<div id="html_fb6f00f3733c3cf0452222228a1ecf14" style="width: 100.0%; height: 100.0%;">     <b>Turbine 11</b><br>Distance to T1: 1450.5m<br>     Station ID: 2304520<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.511843, -3.080659)<br>     Status: Excluded     </div>`)[0];
+                popup_828677a6d53b28f30d25f37521f7b251.setContent(html_fb6f00f3733c3cf0452222228a1ecf14);
+            
+        
+
+        marker_851f82f7937442b443391d37a7ffd023.bindPopup(popup_828677a6d53b28f30d25f37521f7b251)
+        ;
+
+        
+    
+    
+            marker_851f82f7937442b443391d37a7ffd023.bindTooltip(
+                `<div>
+                     T11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_851f82f7937442b443391d37a7ffd023.setIcon(icon_483939cd5d0c0d23ff952ad9507e560a);
+            
+    
+            var marker_8a311e6914ae27566cece9ca030fd4f0 = L.marker(
+                [57.51081569, -3.073684523],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_e222d8eed6f883aa06f62dce41658745 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_420e1c258cf05b7746782fecef8434f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d739df2d52a79365315c25fb19f563d7 = $(`<div id="html_d739df2d52a79365315c25fb19f563d7" style="width: 100.0%; height: 100.0%;">     <b>Turbine 12</b><br>Distance to T1: 1507.5m<br>     Station ID: 2304521<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.510816, -3.073685)<br>     Status: Excluded     </div>`)[0];
+                popup_420e1c258cf05b7746782fecef8434f4.setContent(html_d739df2d52a79365315c25fb19f563d7);
+            
+        
+
+        marker_8a311e6914ae27566cece9ca030fd4f0.bindPopup(popup_420e1c258cf05b7746782fecef8434f4)
+        ;
+
+        
+    
+    
+            marker_8a311e6914ae27566cece9ca030fd4f0.bindTooltip(
+                `<div>
+                     T12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a311e6914ae27566cece9ca030fd4f0.setIcon(icon_e222d8eed6f883aa06f62dce41658745);
+            
+    
+            var marker_7ad7851c28d32ba088fd95a6d7cafd60 = L.marker(
+                [57.51666161, -3.078146735],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_756d9b74abeeb3d7321c23f05364ea74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94b94064243534a7f1656a93c5c17d3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f75335c41381f694d5eb06f3c86339f9 = $(`<div id="html_f75335c41381f694d5eb06f3c86339f9" style="width: 100.0%; height: 100.0%;">     <b>Turbine 13</b><br>Distance to T1: 2006.8m<br>     Station ID: 2304522<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.516662, -3.078147)<br>     Status: Excluded     </div>`)[0];
+                popup_94b94064243534a7f1656a93c5c17d3b.setContent(html_f75335c41381f694d5eb06f3c86339f9);
+            
+        
+
+        marker_7ad7851c28d32ba088fd95a6d7cafd60.bindPopup(popup_94b94064243534a7f1656a93c5c17d3b)
+        ;
+
+        
+    
+    
+            marker_7ad7851c28d32ba088fd95a6d7cafd60.bindTooltip(
+                `<div>
+                     T13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7ad7851c28d32ba088fd95a6d7cafd60.setIcon(icon_756d9b74abeeb3d7321c23f05364ea74);
+            
+    
+            var marker_fe1b4398649fa055c8ad2a1268a7a893 = L.marker(
+                [57.51376046, -3.074939555],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_a9895144000459b3f7673869eebda92c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc176d31ad82f7fea841101c70131823 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bcba5fcd750bdbe7e2803280cd2efc31 = $(`<div id="html_bcba5fcd750bdbe7e2803280cd2efc31" style="width: 100.0%; height: 100.0%;">     <b>Turbine 14</b><br>Distance to T1: 1764.4m<br>     Station ID: 2304523<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.513760, -3.074940)<br>     Status: Excluded     </div>`)[0];
+                popup_cc176d31ad82f7fea841101c70131823.setContent(html_bcba5fcd750bdbe7e2803280cd2efc31);
+            
+        
+
+        marker_fe1b4398649fa055c8ad2a1268a7a893.bindPopup(popup_cc176d31ad82f7fea841101c70131823)
+        ;
+
+        
+    
+    
+            marker_fe1b4398649fa055c8ad2a1268a7a893.bindTooltip(
+                `<div>
+                     T14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe1b4398649fa055c8ad2a1268a7a893.setIcon(icon_a9895144000459b3f7673869eebda92c);
+            
+    
+            var marker_0fe1ea12e89017b3befce5220e212b04 = L.marker(
+                [57.49941809, -3.062837374],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_4587fc99ac720d47772900aef9ed4a3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd02929dc7d1f2fc46da30405311d021 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2dfe18a7f75f97cd877a60cc5e4a2487 = $(`<div id="html_2dfe18a7f75f97cd877a60cc5e4a2487" style="width: 100.0%; height: 100.0%;">     <b>Turbine 15</b><br>Distance to T1: 1428.4m<br>     Station ID: 2304524<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.499418, -3.062837)<br>     Status: Excluded     </div>`)[0];
+                popup_dd02929dc7d1f2fc46da30405311d021.setContent(html_2dfe18a7f75f97cd877a60cc5e4a2487);
+            
+        
+
+        marker_0fe1ea12e89017b3befce5220e212b04.bindPopup(popup_dd02929dc7d1f2fc46da30405311d021)
+        ;
+
+        
+    
+    
+            marker_0fe1ea12e89017b3befce5220e212b04.bindTooltip(
+                `<div>
+                     T15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fe1ea12e89017b3befce5220e212b04.setIcon(icon_4587fc99ac720d47772900aef9ed4a3d);
+            
+    
+            var marker_73ecc1fcb5360cb99542958480710c3c = L.marker(
+                [57.50513916, -3.053340822],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_aa7f9cb7b44dad550a3f71deb39c6e2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ead1e1686a2bc59dc6c81f87ac342647 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db3b8dda1c33928d5291dd80d2104175 = $(`<div id="html_db3b8dda1c33928d5291dd80d2104175" style="width: 100.0%; height: 100.0%;">     <b>Turbine 16</b><br>Distance to T1: 2101.4m<br>     Station ID: 2304525<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.505139, -3.053341)<br>     Status: Excluded     </div>`)[0];
+                popup_ead1e1686a2bc59dc6c81f87ac342647.setContent(html_db3b8dda1c33928d5291dd80d2104175);
+            
+        
+
+        marker_73ecc1fcb5360cb99542958480710c3c.bindPopup(popup_ead1e1686a2bc59dc6c81f87ac342647)
+        ;
+
+        
+    
+    
+            marker_73ecc1fcb5360cb99542958480710c3c.bindTooltip(
+                `<div>
+                     T16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_73ecc1fcb5360cb99542958480710c3c.setIcon(icon_aa7f9cb7b44dad550a3f71deb39c6e2f);
+            
+    
+            var marker_12b3f96634cf6f59afff97ad59523beb = L.marker(
+                [57.50662266, -3.047792556],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_e0b83e076a708c5f155ed71f2d210bb2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8f09a4ce5c8da0c1cbd0f7a7f48b33d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f68701d4e9454292cbcdfb9a610087da = $(`<div id="html_f68701d4e9454292cbcdfb9a610087da" style="width: 100.0%; height: 100.0%;">     <b>Turbine 17</b><br>Distance to T1: 2468.4m<br>     Station ID: 2304526<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.506623, -3.047793)<br>     Status: Excluded     </div>`)[0];
+                popup_f8f09a4ce5c8da0c1cbd0f7a7f48b33d.setContent(html_f68701d4e9454292cbcdfb9a610087da);
+            
+        
+
+        marker_12b3f96634cf6f59afff97ad59523beb.bindPopup(popup_f8f09a4ce5c8da0c1cbd0f7a7f48b33d)
+        ;
+
+        
+    
+    
+            marker_12b3f96634cf6f59afff97ad59523beb.bindTooltip(
+                `<div>
+                     T17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_12b3f96634cf6f59afff97ad59523beb.setIcon(icon_e0b83e076a708c5f155ed71f2d210bb2);
+            
+    
+            var marker_447e7b5b0df3142deb6bdcd3a3291831 = L.marker(
+                [57.50429684, -3.041183981],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_f6a403d16b343ef100839820c1d61445 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b18c2e85115a9d543bd3ed63076f439a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1362738ffbf57a0ed6faaa5832e1e049 = $(`<div id="html_1362738ffbf57a0ed6faaa5832e1e049" style="width: 100.0%; height: 100.0%;">     <b>Turbine 18</b><br>Distance to T1: 2779.8m<br>     Station ID: 2304527<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.504297, -3.041184)<br>     Status: Excluded     </div>`)[0];
+                popup_b18c2e85115a9d543bd3ed63076f439a.setContent(html_1362738ffbf57a0ed6faaa5832e1e049);
+            
+        
+
+        marker_447e7b5b0df3142deb6bdcd3a3291831.bindPopup(popup_b18c2e85115a9d543bd3ed63076f439a)
+        ;
+
+        
+    
+    
+            marker_447e7b5b0df3142deb6bdcd3a3291831.bindTooltip(
+                `<div>
+                     T18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_447e7b5b0df3142deb6bdcd3a3291831.setIcon(icon_f6a403d16b343ef100839820c1d61445);
+            
+    
+            var marker_1c58b8ca6fbced56be5d2c5348e291d2 = L.marker(
+                [57.50859585, -3.041656952],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_e6ad2f975ced4d6f6b7fbbcd47ee34b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b4543a2ac828a9f2ef1591a2adffe83 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02ff15882373e2b4eaddaff2261d9ccd = $(`<div id="html_02ff15882373e2b4eaddaff2261d9ccd" style="width: 100.0%; height: 100.0%;">     <b>Turbine 19</b><br>Distance to T1: 2888.3m<br>     Station ID: 2304528<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.508596, -3.041657)<br>     Status: Excluded     </div>`)[0];
+                popup_1b4543a2ac828a9f2ef1591a2adffe83.setContent(html_02ff15882373e2b4eaddaff2261d9ccd);
+            
+        
+
+        marker_1c58b8ca6fbced56be5d2c5348e291d2.bindPopup(popup_1b4543a2ac828a9f2ef1591a2adffe83)
+        ;
+
+        
+    
+    
+            marker_1c58b8ca6fbced56be5d2c5348e291d2.bindTooltip(
+                `<div>
+                     T19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c58b8ca6fbced56be5d2c5348e291d2.setIcon(icon_e6ad2f975ced4d6f6b7fbbcd47ee34b9);
+            
+    
+            var marker_96fd8f5e9f3a0d8164b810aaa43c0014 = L.marker(
+                [57.51202849, -3.040436127],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_60bdfae0e03bc549f371b214511e39c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88eb1628cae2c6a935918a84822b7f92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0db4f19675ab8742f01c2d963a75cff5 = $(`<div id="html_0db4f19675ab8742f01c2d963a75cff5" style="width: 100.0%; height: 100.0%;">     <b>Turbine 20</b><br>Distance to T1: 3111.6m<br>     Station ID: 2304529<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.512028, -3.040436)<br>     Status: Excluded     </div>`)[0];
+                popup_88eb1628cae2c6a935918a84822b7f92.setContent(html_0db4f19675ab8742f01c2d963a75cff5);
+            
+        
+
+        marker_96fd8f5e9f3a0d8164b810aaa43c0014.bindPopup(popup_88eb1628cae2c6a935918a84822b7f92)
+        ;
+
+        
+    
+    
+            marker_96fd8f5e9f3a0d8164b810aaa43c0014.bindTooltip(
+                `<div>
+                     T20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96fd8f5e9f3a0d8164b810aaa43c0014.setIcon(icon_60bdfae0e03bc549f371b214511e39c4);
+            
+    
+            var marker_07436112aff450515b57d369d943704b = L.marker(
+                [57.50978499, -3.034697307],
+                {
+}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+            var icon_ea48724ddbdda4d6040a218e226c0d35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "minus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b1dc32c68a3e78b16c88ed5a87ec6ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_daebe7033e400a5a017234281147bbd8 = $(`<div id="html_daebe7033e400a5a017234281147bbd8" style="width: 100.0%; height: 100.0%;">     <b>Turbine 21</b><br>Distance to T1: 3323.8m<br>     Station ID: 2304530<br>     Model: SWT-2.3-VS-82<br>     Rated Power: 2,300 kW<br>     Position: (57.509785, -3.034697)<br>     Status: Excluded     </div>`)[0];
+                popup_2b1dc32c68a3e78b16c88ed5a87ec6ed.setContent(html_daebe7033e400a5a017234281147bbd8);
+            
+        
+
+        marker_07436112aff450515b57d369d943704b.bindPopup(popup_2b1dc32c68a3e78b16c88ed5a87ec6ed)
+        ;
+
+        
+    
+    
+            marker_07436112aff450515b57d369d943704b.bindTooltip(
+                `<div>
+                     T21
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_07436112aff450515b57d369d943704b.setIcon(icon_ea48724ddbdda4d6040a218e226c0d35);
+            
+    
+            var poly_line_6ef7a424aebe372083f2d4b09354e930 = L.polyline(
+                [[57.49921441, -3.086742896], [57.49626574, -3.082817716], [57.50206973, -3.088980479], [57.50196736, -3.082085466], [57.49891107, -3.07812382], [57.50513302, -3.085850762]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_7c14cc6fa768539e70363f39a8676ed7);
+        
+    
+        var popup_61bbcbf5b931ac87b42cf97e1252449c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4828d9ce592329c968d5b885dd7247e8 = $(`<div id="html_4828d9ce592329c968d5b885dd7247e8" style="width: 100.0%; height: 100.0%;">Competition Turbines</div>`)[0];
+                popup_61bbcbf5b931ac87b42cf97e1252449c.setContent(html_4828d9ce592329c968d5b885dd7247e8);
+            
+        
+
+        poly_line_6ef7a424aebe372083f2d4b09354e930.bindPopup(popup_61bbcbf5b931ac87b42cf97e1252449c)
+        ;
+
+        
+    
+</script>
+</html>

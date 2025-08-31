@@ -1,0 +1,185 @@
+# Siemens SWT-2.3-82 wind turbine definition for FLORIS
+# Data based on official manufacturer specifications from thewindpower.net
+# Cut-in: 3.5 m/s, Cut-out: 25 m/s, Rated power: 2300 kW at 17 m/s
+# Rotor diameter: 82 m, Hub height: 59 m
+
+###
+# An ID for this type of turbine definition
+turbine_type: 'siemens_swt_2_3_82'
+
+###
+# Hub height (from turbine_metadata.csv)
+hub_height: 59.0
+
+###
+# Rotor diameter (from turbine_metadata.csv)
+rotor_diameter: 82.0
+
+###
+# Tip speed ratio (typical for variable speed turbines)
+TSR: 7.5
+
+###
+# Model for power and thrust curve interpretation
+operation_model: 'cosine-loss'
+
+###
+# Parameters needed to evaluate the power and thrust produced by the turbine
+power_thrust_table:
+  ### Power thrust table parameters
+  # The air density at which the power and thrust_coefficient curves are defined
+  ref_air_density: 1.225
+  ###
+  # The tilt angle at which the Cp and Ct curves are defined
+  ref_tilt: 5.0
+  ###
+  # Cosine exponent for power loss due to tilt
+  cosine_loss_exponent_tilt: 1.88
+  ###
+  # Cosine exponent for power loss due to yaw misalignment
+  cosine_loss_exponent_yaw: 1.88
+  ###
+  # Wind speeds for look-up tables (m/s)
+  wind_speed:
+    - 0.0
+    - 3.0
+    - 3.4
+    - 3.5   # Cut-in
+    - 4.0
+    - 4.5
+    - 5.0
+    - 5.5
+    - 6.0
+    - 6.5
+    - 7.0
+    - 7.5
+    - 8.0
+    - 8.5
+    - 9.0
+    - 9.5
+    - 10.0
+    - 10.5
+    - 11.0
+    - 11.5
+    - 12.0
+    - 12.5
+    - 13.0
+    - 13.5
+    - 14.0
+    - 14.5
+    - 15.0
+    - 15.5
+    - 16.0
+    - 16.5
+    - 17.0  # Rated wind speed
+    - 17.5
+    - 18.0
+    - 19.0
+    - 20.0
+    - 21.0
+    - 22.0
+    - 23.0
+    - 24.0
+    - 24.5
+    - 24.9
+    - 25.0  # Cut-out
+    - 25.1
+    - 50.0
+  ###
+  # Power values (kW) - based on actual power curve from thewindpower.net
+  power:
+    - 0.0      # 0 m/s
+    - 0.0      # 3.0 m/s
+    - 0.0      # 3.4 m/s
+    - 20.0     # 3.5 m/s - Cut-in
+    - 42.0     # 4.0 m/s
+    - 85.0     # 4.5 m/s
+    - 136.0    # 5.0 m/s
+    - 200.0    # 5.5 m/s
+    - 276.0    # 6.0 m/s
+    - 370.0    # 6.5 m/s
+    - 470.0    # 7.0 m/s
+    - 600.0    # 7.5 m/s
+    - 727.0    # 8.0 m/s
+    - 885.0    # 8.5 m/s
+    - 1043.0   # 9.0 m/s
+    - 1219.0   # 9.5 m/s
+    - 1394.0   # 10.0 m/s
+    - 1566.0   # 10.5 m/s
+    - 1738.0   # 11.0 m/s
+    - 1877.0   # 11.5 m/s
+    - 2015.0   # 12.0 m/s
+    - 2100.0   # 12.5 m/s
+    - 2183.0   # 13.0 m/s
+    - 2230.0   # 13.5 m/s
+    - 2260.0   # 14.0 m/s
+    - 2285.0   # 14.5 m/s
+    - 2288.0   # 15.0 m/s
+    - 2297.0   # 15.5 m/s
+    - 2298.0   # 16.0 m/s
+    - 2299.0   # 16.5 m/s
+    - 2300.0   # 17.0 m/s - Rated power reached
+    - 2300.0   # 17.5 m/s
+    - 2300.0   # 18.0 m/s
+    - 2300.0   # 19.0 m/s
+    - 2300.0   # 20.0 m/s
+    - 2300.0   # 21.0 m/s
+    - 2300.0   # 22.0 m/s
+    - 2300.0   # 23.0 m/s
+    - 2300.0   # 24.0 m/s
+    - 2300.0   # 24.5 m/s
+    - 2300.0   # 24.9 m/s
+    - 2300.0   # 25.0 m/s - Cut-out
+    - 0.0      # 25.1 m/s
+    - 0.0      # 50.0 m/s
+  ###
+  # Thrust coefficient values (unitless) - typical values for pitch-controlled turbine
+  thrust_coefficient:
+    - 0.0      # 0 m/s
+    - 0.0      # 3.0 m/s
+    - 0.0      # 3.4 m/s
+    - 0.30     # 3.5 m/s - Cut-in
+    - 0.50     # 4.0 m/s
+    - 0.65     # 4.5 m/s
+    - 0.75     # 5.0 m/s
+    - 0.82     # 5.5 m/s
+    - 0.85     # 6.0 m/s
+    - 0.86     # 6.5 m/s
+    - 0.87     # 7.0 m/s
+    - 0.88     # 7.5 m/s
+    - 0.88     # 8.0 m/s
+    - 0.87     # 8.5 m/s
+    - 0.86     # 9.0 m/s
+    - 0.84     # 9.5 m/s
+    - 0.82     # 10.0 m/s
+    - 0.79     # 10.5 m/s
+    - 0.76     # 11.0 m/s
+    - 0.72     # 11.5 m/s
+    - 0.68     # 12.0 m/s
+    - 0.64     # 12.5 m/s
+    - 0.60     # 13.0 m/s
+    - 0.56     # 13.5 m/s
+    - 0.52     # 14.0 m/s
+    - 0.48     # 14.5 m/s
+    - 0.45     # 15.0 m/s
+    - 0.42     # 15.5 m/s
+    - 0.39     # 16.0 m/s
+    - 0.36     # 16.5 m/s
+    - 0.33     # 17.0 m/s - Pitch control at rated
+    - 0.31     # 17.5 m/s
+    - 0.29     # 18.0 m/s
+    - 0.26     # 19.0 m/s
+    - 0.23     # 20.0 m/s
+    - 0.21     # 21.0 m/s
+    - 0.19     # 22.0 m/s
+    - 0.17     # 23.0 m/s
+    - 0.15     # 24.0 m/s
+    - 0.14     # 24.5 m/s
+    - 0.13     # 24.9 m/s
+    - 0.13     # 25.0 m/s - Cut-out
+    - 0.0      # 25.1 m/s
+    - 0.0      # 50.0 m/s
+
+###
+# A boolean flag for multi-dimensional Cp/Ct
+multi_dimensional_cp_ct: False
